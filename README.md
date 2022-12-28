@@ -1,4 +1,4 @@
-# WakeWordDetection
+# WakeWordDetection - Update in Progress!
 ## Overview of this project
 This repository is a documentation of Wakeword detection model development with Pytorch intended for use with QT robots. 
 - [X] Selection of wakeword to be trained: "Hello QT"
