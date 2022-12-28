@@ -5,7 +5,7 @@ This repository is a documentation of Wakeword detection model development with 
 - [X] Data Collection: collected approximately 50-60 real world audio from 10 different collaborators
 - [X] Data Preprocessing/ Augmentation: Cleaning and formatted the data and augmented to upsample to 600 examples.
 - [x] Model Design Selection: Researched for best and efficient architecture for real world application purpose (referenced Michael Phi)
-- [x] Training / Testing:
+- [x] Training / Testing: Best Test Accuracy: **0.9448529411764706**
 - [ ] Deployment to as the real world application
 - [ ] Maintenance    
 
@@ -28,8 +28,17 @@ We also randomly select the environmental background noises as the 0 label examp
    **Little Note 2: Sample rate of the audio files** Think about the sample rate of the audio file we are dealing with, if the audio sample rate of the background noise is greater than the audio file which we intend to augment, downsampling must be performed, which hurts the execution time. 
    
  ### Model Design Selection
+ First, we want to mention two different type of neural networks, RNN and CNN.
+ CNN, convolutional neural network which is used for imagery data. Convolution simplifies the complex and grained representation of images. RNN, recurrent neural network on the other hand, is used for temporal problems such as language processing, speech recognition and etc.
+ 
+ We selected LSTM, long short term memory network which is a special kind of RNN as the model architecture. 
  
  ### Training / Testing
+
+We use the LSTM model with 32 hidden units and 1 layer. 
+We selected AdamW as the optimzer and BCEWithLogitLoss, Binary cross entropy with logit loss. We use BCEWithLogitLoss because it is more stable than using sigmoid and BCELoss separately.
+
+We ran 100 epoch on the dataset and achieved the best test accuracy of **0.9448529411764706**
 
 ## Reference 
 
