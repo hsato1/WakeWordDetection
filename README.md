@@ -5,7 +5,7 @@ This repository is a documentation of Wakeword detection model development with 
 - [X] Data Collection: collected approximately 50-60 real world audio from 10 different collaborators
 - [X] Data Preprocessing/ Augmentation: Cleaning and formatted the data and augmented to upsample to 600 examples.
 - [x] Model Design Selection: Researched for best and efficient architecture for real world application purpose (referenced Michael Phi)
-- [x] Training / Testing: Best Test Accuracy: **0.9448529411764706**
+- [x] Training / Testing: **Best Test Accuracy: 0.9448529411764706**
 - [ ] Deployment to as the real world application
 - [ ] Maintenance    
 
